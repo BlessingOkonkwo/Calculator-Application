@@ -1,0 +1,88 @@
+@mixin display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: sans-serif;
+    outline: none;
+    background-color: bisque;
+}
+
+.container {
+    height: 100vh;
+    @include display();
+
+    .calculator {
+        background-color: #ecf0f3;
+        border-radius: 30px;
+        padding: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        // max-width: 400px;
+
+        #outputscreen {
+            width: 100%;
+            height: 70px;
+            background-color: #ecf0f3;
+            box-shadow: inset -5px -5px 12px #ffffff;
+            border: none;
+            border-radius: 20px;
+            font-size: 20px;
+            color: rgba(70, 70, 70);
+            text-align: end;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding: 20px; 
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        .buttons {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 70px);
+            padding-top: 10px;
+
+            button {
+                @include display();
+                border: none;
+                margin: 8px;
+                border-radius: 50%;
+                height: 48px;
+                width: 48px;
+                background-color: #ecf0f3;
+                font-size: 16px;
+                box-shadow: -5px -5px 12px #ffffff,
+                             5px 5px 12px rgba(0,0,0,.16);
+
+                &:hover {
+                    background-color: #ccd5db;
+                    cursor: pointer;
+                }
+
+                &:active {
+                    background-color: #ecf0f3;
+                }
+            }
+
+            .equal {
+                background-color: rgb(243, 224, 201);
+            } 
+        }
+    }
+
+    .calculator:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "calculator-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "node-sass sass/main.scss css/style.css",
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlessingOkonkwo/Calculator-Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlessingOkonkwo/Calculator-Application/issues"
+  },
+  "homepage": "https://github.com/BlessingOkonkwo/Calculator-Application#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
