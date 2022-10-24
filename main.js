@@ -1,28 +1,3 @@
-// let outputScreen = document.getElementById("outputscreen");
-
-// function display(num){
-//     outputScreen.value =+ num;
-// }
-
-// function calculate() {
-//     try {
-//         outputScreen.value = eval(outputScreen.value);
-//     }
-
-//     catch(err) {
-//         alert('Invalid')
-//     }
-// }
-
-// function clear() {
-//     outputScreen.value = ""
-// }
-
-// function del() {
-//     outputScreen.value = outputScreen.value.slice(0, -1);
-// }
-
-
 const display = document.getElementById("outputscreen");
 const buttons = document.querySelectorAll('button');
 
@@ -41,7 +16,6 @@ buttons.forEach((item) => {
         } else {
             display.value += item.id;
         }
-        // item.onclick(display.value = '');
     }
 
 })
